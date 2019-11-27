@@ -23,14 +23,15 @@
 #         return int(nums)
 #     if len(nums) == 3:
 
-    
+def separate(word): 
+    return [char for char in word]
     
 
 # #print(add("700"))
 
 # #print(len("1,2"))
 # # 
-string = "1,2,9,6"
+string = "//[***]\n1***2***30"
 
 if len(string) == 0:
     print(0)
@@ -51,9 +52,16 @@ if len(string) == 3:
 # print(added)
 
 if len(string) > 3:
-    for each in string:
+    for each in separate(string):
         try:
             added += int(each)
         except:
             continue
 print(added)
+
+# Python3 program to Split string into characters 
+  
+      
+# Driver code 
+word = "//[***]\n1***2***30"
+print(separate(word))
