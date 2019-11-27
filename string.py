@@ -30,7 +30,7 @@
 
 # #print(len("1,2"))
 # # 
-string = "1,2"
+string = "1,2,9,6"
 
 if len(string) == 0:
     print(0)
@@ -41,13 +41,19 @@ if len(string) == 1:
     except:
         print("ERROR. Only accepts numbers.")
 
+added = 0
 if len(string) == 3:
-    added = 0
+    for each in string:
+        try:
+            added += int(each)
+        except:
+            continue
+# print(added)
+
+if len(string) > 3:
     for each in string:
         try:
             added += int(each)
         except:
             continue
 print(added)
-
-
