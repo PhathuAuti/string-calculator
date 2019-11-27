@@ -31,28 +31,28 @@ def separate(word):
 
 # #print(len("1,2"))
 # # 
-string = "//[***]\n1***2***30"
+strng = "//[***]\n1***2***30"
 
-if len(string) == 0:
+if len(strng) == 0:
     print(0)
 
-if len(string) == 1:
+if len(strng) == 1:
     try:
-        print(int(string)) 
+        print(int(strng)) 
     except:
         print("ERROR. Only accepts numbers.")
 
 added = 0
-if len(string) == 3:
-    for each in string:
+if len(strng) == 3:
+    for each in strng:
         try:
             added += int(each)
         except:
             continue
 # print(added)
 
-if len(string) > 3:
-    for each in separate(string):
+if len(strng) > 3:
+    for each in separate(strng):
         try:
             added += int(each)
         except:
