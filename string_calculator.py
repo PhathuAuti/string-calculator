@@ -1,6 +1,8 @@
 import re
 
 def add(string):
+    # converting string to raw string
+    string = r'{}'.format(string)
     # Extract numbers (both positive and negative) into a string numbers list x
     integers = re.findall(r"-?\d+", string)
     total_sum = 0

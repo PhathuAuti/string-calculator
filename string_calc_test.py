@@ -18,9 +18,9 @@ def test_add_with_new_lines():
 # testing to support delimiters of any shapes and sizes
 def test_add_with_delimiters():
     assert add("//;\n1;2") == 3
-    # assert add("//[]\n12***3") == 6
-    # assert add("//[][%]\n12%3") == 6
-    # assert add("//[][%]//[]\n12***3\n12%3") == 12
+    assert add("//***\n1***2***3") == 6
+    assert add("//[\*][%]\n1\*2%3") == 6
+    assert add("//***//[\*][%]\n1\*2%3\n1***2***3") == 12
 
 #  testing negatives not allowed
 def test_add_negative_integers():
